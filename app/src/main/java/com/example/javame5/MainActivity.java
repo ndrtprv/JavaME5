@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         return mt;
     }
 
-    class MyTask extends AsyncTask<String, Integer, Void> {
+    static class MyTask extends AsyncTask<String, Integer, Void> {
 
         MainActivity activity;
 
@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
                     publishProgress(i);
                     Log.d("qwe", "i = " + i
                             + ", MyTask: " + this.hashCode()
-                            + ", MainActivity: " + MainActivity.this.hashCode());
+                            + ", MainActivity: " + activity.hashCode());
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
         @Override
         protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
-            tv.setText("i = " + values[0]);
+            activity.tv.setText("i = " + values[0]);
         }
 
         void link(MainActivity act) {

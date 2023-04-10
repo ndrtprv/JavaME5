@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:background="#246EE9">
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="">
-    </TextView>
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#FF2400"
+        android:textSize="20sp"
+        android:textStyle="bold"></TextView>
 
 </LinearLayout>
